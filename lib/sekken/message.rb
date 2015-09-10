@@ -13,7 +13,7 @@ class Sekken
     end
 
     def build(message)
-      builder = Builder::XmlMarkup.new(indent: 2, margin: 2)
+      builder = Builder::XmlMarkup.new
 
       build_elements(@parts, message.dup, builder)
       builder.target!
