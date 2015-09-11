@@ -49,7 +49,7 @@ class Sekken
     end
 
     def build_envelope(header, body)
-      builder = Builder::XmlMarkup.new(indent: 2)
+      builder = Builder::XmlMarkup.new
 
       builder.tag! :env, :Envelope, collect_namespaces do |xml|
         xml.tag!(:env, :Header) { |xml| xml << header }
